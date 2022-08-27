@@ -21,49 +21,57 @@ function generateTitle(content) {
 }
 
 function generateTableOfContents(name) {
-return `## ${name}
+  return `## ${name}
 
 - Installation
 - Usage
 - License
 - Contributing
 - Tests
-- Questions`
+- Questions`;
 }
 
-function generateQuestionSection(name, fullName, email, gitHub, contactInstructions) {
-return `## ${name}
+function generateQuestionSection(
+  name,
+  fullName,
+  email,
+  gitHub,
+  contactInstructions
+) {
+  return `## ${name}
 
 ${contactInstructions}
 
 ${fullName}
 Email: ${email}
 GitHub Profile - [Link](${gitHub})
-`
+`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(responses) {
-  //title
-  generateTitle(responses.title);
-  //description
-  generateSection("Description", responses.description);
-  //table of contents
-  generateTableOfContents("Table of Contents")
-  //installation
-  generateSection("Installation", responses.install);
-  //usage
-  generateSection("Usage", responses.usage);
-  //license
-  //contributing
-  generateSection("Contributing", responses.contribute);
-  //tests
-  generateSection("Tests", responses.test);
-  //questions
-  generateQuestionSection("Questions", responses.fullName, responses.email, responses.gitHub, responses.contactInstructions)
+  return `${generateTitle(responses.title)}
 
-  return `# ${responses.title}
-`;
+  ${generateSection("Description", responses.description)}
+
+${generateTableOfContents("Table of Contents")}
+
+${generateSection("Installation", responses.install)}
+
+${generateSection("Usage", responses.usage)}
+
+${generateSection("Contributing", responses.contribute)}
+
+${generateSection("Tests", responses.test)}
+
+${generateQuestionSection(
+  "Questions",
+  responses.fullName,
+  responses.email,
+  responses.gitHub,
+  responses.contactInstructions
+)}
+  `;
 }
 
 module.exports = generateMarkdown;
