@@ -29,7 +29,30 @@ const questions = [
   {
     type: "checkbox",
     message: "What licenses does your project have?",
-    //choices: //put choices here!!
+    choice: [
+      {
+        name: "MIT",
+        value: {
+          badgeImageURL: "https://img.shields.io/badge/License-MIT-yellow.svg",
+          licenseLink: "https://opensource.org/licenses/MIT",
+        },
+      },
+      {
+        name: "GNU",
+        value: {
+          badgeImageURL: "https://img.shields.io/badge/License-GPLv3-blue.svg",
+          licenseLink: "https://www.gnu.org/licenses/gpl-3.0",
+        },
+      },
+      {
+        name: "Apache",
+        value: {
+          badgeImageURL:
+            "https://img.shields.io/badge/License-Apache_2.0-blue.svg",
+          licenseLink: "https://opensource.org/licenses/Apache-2.0",
+        },
+      },
+    ],
     name: "license",
   },
   {
@@ -46,7 +69,7 @@ const questions = [
   {
     type: "input",
     message: "What is your full name?",
-    name: "name",
+    name: "fullName",
   },
   {
     type: "input",
@@ -61,7 +84,7 @@ const questions = [
   {
     type: "input",
     message: "Please specify how to reach you for additional questions.",
-    name: "question",
+    name: "contactInstructions",
   },
 ];
 
