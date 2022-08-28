@@ -1,13 +1,14 @@
 // Creating License Badges
 function generateLicenseBadge(licenses) {
-  if (licenses === []) {
+  if (licenses.length === 0) {
     return "";
   } else {
     var licenseMarkdown = "";
 
     licenses.forEach((licenseChoice) => {
-      licenseMarkdown +
-        `[![License: ${licenseChoice.licenseName}](${licenseChoice.badgeImageURL})](${licenseChoice.licenseLink})`;
+      console.log(JSON.stringify(licenseChoice));
+      licenseMarkdown += `[![License: ${licenseChoice.licenseName}](${licenseChoice.badgeImageURL})](${licenseChoice.licenseLink}) `;
+      console.log(licenseMarkdown);
     });
     return licenseMarkdown;
   }
@@ -39,17 +40,19 @@ function generateTableOfContents(name) {
 
 // Creating license section
 function generateLicenseSection(name, licenses) {
-  if (licenses === []) {
+  if (licenses.length === 0) {
     return "";
   } else {
-    var licenseSectionContent = "This project has the following license(s): ";
+    var licenseSectionContent = "";
 
     licenses.forEach((licenseChoice) => {
-      licenseSectionContent + `- ${licenseChoice.licenseName}`;
+      licenseSectionContent += `
+- ${licenseChoice.licenseName}`;
     });
-    return `## ${name} 
-    
-    ${licenseSectionContent}`;
+
+    return `## ${name}
+This project has the following license(s)
+${licenseSectionContent}`;
   }
 }
 
@@ -66,8 +69,10 @@ function generateQuestionSection(
 ${contactInstructions}
 
 ${fullName}
+
 Email: ${email}
-GitHub Profile - [Link](${gitHub})
+ 
+GitHub Profile: [Link](${gitHub})
 `;
 }
 
