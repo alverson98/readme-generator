@@ -1,32 +1,31 @@
-function declareSelectedBadges(licenses) {
+// Creating License Badges
+function generateLicenseBadge(licenses) {
   if (licenses === []) {
     return "";
   } else {
     var licenseMarkdown = "";
 
-    responses.licenses.forEach((licenseChoice) => {
+    licenses.forEach((licenseChoice) => {
       licenseMarkdown +
         `[![License: ${licenseChoice.licenseName}](${licenseChoice.badgeImageURL})](${licenseChoice.licenseLink})`;
     });
-    generateLicenseBadge(licenseMarkdown);
     return licenseMarkdown;
   }
 }
 
-function generateLicenseBadge(licenseMarkdown) {
-  return licenseMarkdown;
-}
-
+// Creating sections with only title & content - description, installation, usage, contributing, & tests
 function generateSection(name, content) {
   return `## ${name} 
 
 ${content}`;
 }
 
+// Creating title
 function generateTitle(content) {
   return `## ${content}`;
 }
 
+// Creating TOC
 function generateTableOfContents(name) {
   return `## ${name}
 
@@ -38,12 +37,23 @@ function generateTableOfContents(name) {
 - [Questions](#questions)`;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(licenses) {
-  return;
+// Creating license section
+function generateLicenseSection(name, licenses) {
+  if (licenses === []) {
+    return "";
+  } else {
+    var licenseSectionContent = "This project has the following license(s): ";
+
+    licenses.forEach((licenseChoice) => {
+      licenseSectionContent + `- ${licenseChoice.licenseName}`;
+    });
+    return `## ${name} 
+    
+    ${licenseSectionContent}`;
+  }
 }
 
+//Creating question/contact section
 function generateQuestionSection(
   name,
   fullName,
@@ -61,7 +71,7 @@ GitHub Profile - [Link](${gitHub})
 `;
 }
 
-// TODO: Create a function to generate markdown for README
+//Creating README file content
 function generateMarkdown(responses) {
   return `${generateLicenseBadge(responses.licenses)}
   
@@ -74,6 +84,8 @@ ${generateTableOfContents("Table of Contents")}
 ${generateSection("Installation", responses.install)}
 
 ${generateSection("Usage", responses.usage)}
+
+${generateLicenseSection("Licenses", responses.licenses)}
 
 ${generateSection("Contributing", responses.contribute)}
 
