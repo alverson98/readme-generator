@@ -1,14 +1,21 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function declareSelectedBadges(licenses) {
+  if (licenses === []) {
+    return "";
+  } else {
+    var licenseMarkdown = "";
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+    responses.licenses.forEach((licenseChoice) => {
+      licenseMarkdown +
+        `[![License: ${licenseChoice.licenseName}](${licenseChoice.badgeImageURL})](${licenseChoice.licenseLink})`;
+    });
+    generateLicenseBadge(licenseMarkdown);
+    return licenseMarkdown;
+  }
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function generateLicenseBadge(licenseMarkdown) {
+  return licenseMarkdown;
+}
 
 function generateSection(name, content) {
   return `## ${name} 
@@ -23,12 +30,18 @@ function generateTitle(content) {
 function generateTableOfContents(name) {
   return `## ${name}
 
-- Installation
-- Usage
-- License
-- Contributing
-- Tests
-- Questions`;
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)`;
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(licenses) {
+  return;
 }
 
 function generateQuestionSection(
@@ -50,7 +63,9 @@ GitHub Profile - [Link](${gitHub})
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(responses) {
-  return `${generateTitle(responses.title)}
+  return `${generateLicenseBadge(responses.licenses)}
+  
+  ${generateTitle(responses.title)}
 
   ${generateSection("Description", responses.description)}
 
