@@ -5,17 +5,17 @@ Module 9 - Node.js Challenge: Professional README Generator
 ---
 
 ## Description
+
 This application is a markdown file generator, specifically to create README.md files. The purpose of this project was to practice recently learned skills when working with the inquirer package and creating unit tests. The main goal was to use inquirer to prompt users to answer questions and use their responses to create a README.md file for their application. Since this application does not exist in the browser, it was a challenge having to use unit tests to test my code. It's a complete different way of thinking, and this project did a great job challenging those skills.
 
 ### Requirements
 
 A list of requirements derived from acceptance criteria and personal goals:
 
-- README.md file created with the sections Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions. 
+- README.md file created with the sections Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 - Answers from the user updates the corresponding sections of the README.
 - Chosen license badges are displayed on the top of the README, along with license name listed in the License section.
 - Links in the Table of Contents take you to that corresponding section.
-
 
 ### Skills Learned/ Improved
 
@@ -41,15 +41,16 @@ This application is used to create a README.md file for any project that someone
 
 This is the terminal built in VS code once the application is initiated. Once the questions are answered, the terminal will display a "Success!" or Error message depending on the status of the file.
 
-![Screenshot of application running in terminal]()
+![Screenshot of application running in terminal](./assets/images/question-prompts.jpeg)
 
-Then the README-demo folder will contain the newly created README.md file. It can be viewed either as the raw form or as a preview. It is recommended to add more detail to the documents such as any deployed links, screenshots, etc. after using this application.
+Then the README directory will contain the newly created README.md file. It can be viewed either as the raw form or as a preview. It is recommended to add more detail to the documents such as any deployed links, screenshots, etc. after using this application.
 
 Here is the raw example:
-![Screenshot of raw README.md example]()
+![Screenshot of raw README.md example](./assets/images/raw-code.jpeg)
+![Screenshot of raw README.md example](./assets/images/raw-code-remainder.jpeg)
 
 Here is the preview example:
-![Screenshot of the README.md preview]()
+![Screenshot of the README.md preview](./assets/images/readme-preview.jpeg)
 
 ### Links
 
