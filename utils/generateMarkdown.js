@@ -8,7 +8,6 @@ function generateLicenseBadge(licenses) {
     licenses.forEach((licenseChoice) => {
       console.log(JSON.stringify(licenseChoice));
       licenseMarkdown += `[![License: ${licenseChoice.licenseName}](${licenseChoice.badgeImageURL})](${licenseChoice.licenseLink}) `;
-      console.log(licenseMarkdown);
     });
     return licenseMarkdown;
   }

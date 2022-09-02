@@ -104,7 +104,6 @@ function init() {
     var fileContents = generateMarkdown(responses);
 
     writeToFile(fileName, fileContents);
-    console.log(fileContents);
   });
 }
 
