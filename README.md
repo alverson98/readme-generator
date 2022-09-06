@@ -6,7 +6,7 @@ Module 9 - Node.js Challenge: Professional README Generator
 
 ## Description
 
-This application is a markdown file generator, specifically to create README.md files. The purpose of this project was to practice recently learned skills when working with the inquirer package and creating unit tests. The main goal was to use inquirer to prompt users to answer questions and use their responses to create a README.md file for their application. Since this application does not exist in the browser, it was a challenge having to use unit tests to test my code. It's a complete different way of thinking, and this project did a great job challenging those skills.
+This application is a markdown file generator, specifically to create README.md files. The purpose of this project was to practice recently learned skills when working with the inquirer package and creating unit tests. The main goal was to use inquirer to prompt users to answer questions and use their responses to create a README.md file for their application. Since this application does not exist in the browser, it was a challenge having to use new methods to test if my code was working properly.
 
 ### Requirements
 
@@ -50,11 +50,12 @@ Here is the raw example:
 ![Screenshot of raw README.md example](./assets/images/raw-code-remainder.jpeg)
 
 Here is the preview example:
+
 ![Screenshot of the README.md preview](./assets/images/readme-preview.jpeg)
 
 ### Links
 
-[Link]() to walk through video.
+[Link](https://drive.google.com/file/d/1EQuJ0pPRPis0rGKnvMBm7xTkWertKlQs/view) to walk through video.
 
 [Link](https://github.com/alverson98/readme-generator) to code repository.
 
