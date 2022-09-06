@@ -89,7 +89,7 @@ const questions = [
   },
 ];
 
-const fileName = "./README-demo/README.md";
+const fileName = "./README/README.md";
 
 //Creating README file
 function writeToFile(fileName, fileContents) {
