@@ -6,7 +6,7 @@ function generateLicenseBadge(licenses) {
     var licenseMarkdown = "";
 
     licenses.forEach((licenseChoice) => {
-      console.log(JSON.stringify(licenseChoice));
+      JSON.stringify(licenseChoice);
       licenseMarkdown += `[![License: ${licenseChoice.licenseName}](${licenseChoice.badgeImageURL})](${licenseChoice.licenseLink}) `;
     });
     return licenseMarkdown;
@@ -31,7 +31,7 @@ function generateTableOfContents(name) {
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [License](#licenses)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)`;
